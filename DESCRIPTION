@@ -1,0 +1,12 @@
+Package: rwofost
+Type: Package
+Title: R interface for WOFOST 7.1
+Version: 0.0.1
+Author: person("Marian", "Koch", email = "achtmalklug@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: R interface to the WOFOST 7.1 crop simulation model. This is work in progress, so things might not work completely smoothly
+License: GPLv3
+Encoding: UTF-8
+LazyData: true
+Imports: data.table, optimization
