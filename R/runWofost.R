@@ -7,9 +7,9 @@ runWofost<-function(wofostdir=.GlobalEnv$wofostdir,wofostbin=.GlobalEnv$wofostbi
   oldwd<-getwd()
   setwd(wofostdir)
   outfile<-file.path("OUTPUT",gsub("'","",readWofostParfile(file.path("RUNIO","RUNOPT.DAT"))$WOFOUT))
-  ret<-system(wofostbin,intern = T)
-  if (ret!=1) stop("Wofost run error")
+  if (system(wofostbin,ignore.stdout = T)) stop("Wofost run error")
   if(!file.exists(outfile)){outfile=file.path(dirname(outfile),tolower(basename(outfile)))}
   setwd(oldwd)
   readWofostOutput(file.path(wofostdir,outfile))
 }
+

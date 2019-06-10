@@ -82,7 +82,7 @@ writeWeatherWofost<-function(met,targetfolder,station_number=1,prefix=met$site$s
     fn<-file.path(targetfolder,sprintf("%s%d.%s",prefix,station_number,substr(df$year[1],2,4)))
     cat(fn,"\n")
     content<-paste0(lapply(1:nrow(df),function(i){
-      val<-unlist(df[day==i])
+      val<-unlist(df[df$day==i,])
       sprintf("%4d%5d%4d%6.0f.%6.1f%6.1f%8.3f%6.1f%6.1f",
               station_number,
               #val["year"],
