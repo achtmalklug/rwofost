@@ -10,3 +10,4 @@ License: GPLv3
 Encoding: UTF-8
 LazyData: true
 Imports: data.table, optimization
+RoxygenNote: 6.1.0
